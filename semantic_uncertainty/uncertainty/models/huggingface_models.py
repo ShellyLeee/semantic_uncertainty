@@ -185,7 +185,7 @@ class HuggingfaceModel(BaseModel):
 
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_id,
-                trust_remote_code=True,
+                trust_remote_code=False,
                 device_map='auto',
                 **kwargs,
             )
